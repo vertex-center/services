@@ -4,6 +4,11 @@
         "description": "A wrapper for code-server.",
         "repository": "github.com/vertex-center/vertex-code-server"
     },
+    "vertex-onedev": {
+        "name": "Vertex OneDev",
+        "description": "A OneDev wrapper for Vertex.",
+        "repository": "github.com/vertex-center/vertex-onedev"
+    },
     "vertex-redis": {
         "name": "Vertex Redis",
         "description": "A Redis wrapper for Vertex.",
