@@ -1,0 +1,31 @@
+id: onedev
+name: OneDev
+description: Self-hosted Git Server with CI/CD and Kanban.
+
+environment:
+  - type: port
+    name: PORT_CLIENT
+    display_name: Client Port
+    default: 6610
+    description: The port to expose the OneDev client.
+
+  - type: port
+    name: PORT_SERVER
+    display_name: Server Port
+    default: 6611
+    description: The port to expose the OneDev server.
+
+urls:
+  - name: OneDev
+    port: 6610
+    ping: /
+    kind: client
+
+methods:
+  docker:
+    image: 1dev/server
+    ports:
+      6610: 6610
+      6611: 6611
+    volumes:
+      data: /opt/onedev

@@ -1,0 +1,29 @@
+id: code-server
+name: Code Server
+description: VSCode in the browser
+
+environment:
+  - type: port
+    name: PORT
+    display_name: Port
+    default: 8080
+    description: The port to expose Code Server.
+
+urls:
+  - name: Code Server
+    port: 8080
+    ping: /
+    kind: client
+
+methods:
+  docker:
+    image: linuxserver/code-server
+    ports:
+      8443: 8080
+    volumes:
+      config: /config
+
+  script:
+    file: start.sh
+    dependencies:
+      code-server:

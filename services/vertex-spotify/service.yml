@@ -1,0 +1,49 @@
+id: vertex-spotify
+name: Vertex Spotify
+repository: https://github.com/vertex-center/vertex-spotify
+description: This service collects all your Spotify listening on your server and publishes player events on Redis.
+
+environment:
+  - type: port
+    name: PORT
+    display_name: Server Port
+    default: 6150
+    description: The port to expose the API.
+
+  - type: string
+    name: SPOTIFY_ID
+    display_name: Spotify ID
+    description: Your Spotify ID.
+
+  - type: string
+    name: SPOTIFY_SECRET
+    display_name: Spotify Secret
+    secret: true
+    description: Your Spotify Secret.
+
+  - type: url
+    name: SPOTIFY_REDIRECT_URI
+    display_name: Spotify Redirect URI
+    description: Your Spotify authentication callback.
+
+  - type: string
+    name: DB_USER
+    display_name: Database user
+    description: Your Postgres username.
+
+  - type: string
+    name: DB_PASSWORD
+    display_name: Database password
+    description: Your Postgres password.
+
+  - type: string
+    name: DB_NAME
+    display_name: Database name
+    default: vertex-spotify
+    description: Name of the database where this service will store data.
+
+methods:
+  script:
+    file: start.sh
+    clone:
+      repository: https://github.com/vertex-center/vertex-spotify

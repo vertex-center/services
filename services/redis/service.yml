@@ -1,0 +1,21 @@
+id: redis
+name: Redis
+description: In-memory key-value database.
+
+environment:
+  - type: port
+    name: PORT
+    display_name: Server Port
+    default: 6379
+    description: The port to expose the Redis server.
+
+methods:
+  docker:
+    image: redis
+    ports:
+      6379: 6379
+
+  script:
+    file: start.sh
+    dependencies:
+      redis:
