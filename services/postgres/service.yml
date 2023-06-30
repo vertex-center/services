@@ -1,0 +1,37 @@
+id: postgres
+name: Postgres
+description: A relational database.
+
+environment:
+  - type: port
+    name: PORT
+    display_name: Server Port
+    default: 5432
+    description: The port to expose the Postgres database.
+
+  - type: string
+    name: POSTGRES_USER
+    display_name: Username
+    description: The database superuser username.
+
+  - type: string
+    name: POSTGRES_PASSWORD
+    display_name: Password
+    secret: true
+    description: The database superuser password.
+
+methods:
+  docker:
+    image: postgres
+    ports:
+      5432: 5432
+    volumes:
+      data: /var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: POSTGRES_USER
+      POSTGRES_PASSWORD: POSTGRES_PASSWORD
+
+  script:
+    file: start.sh
+    dependencies:
+      postgres:
