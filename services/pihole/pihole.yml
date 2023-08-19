@@ -1,0 +1,42 @@
+id: pihole
+name: Pi-hole
+description: Network-wide Ad Blocking
+
+environment:
+  - type: port
+    name: PORT_DNS
+    display_name: Port DNS
+    default: 53
+    description: The DNS port.
+
+  - type: port
+    name: PORT_DHCP
+    display_name: Port DHCP
+    default: 67
+    description: The DHCP port.
+
+  - type: port
+    name: PORT_HTTP
+    display_name: Port HTTP
+    default: 80
+    description: The HTTP port.
+
+urls:
+  - name: Pi-hole Admin
+    port: 53
+    ping: /admin
+    kind: client
+
+methods:
+  docker:
+    image: pihole/pihole
+    ports:
+      '53/tcp': 53
+      '53/udp': 53
+      '67/udp': 67
+      '80/tcp': 80
+    volumes:
+      etc-pihole: /etc/pihole
+      etc-dnsmasq.d: /etc/dnsmasq.d
+    capabilities:
+      - NET_ADMIN
