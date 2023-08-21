@@ -2,6 +2,11 @@ id: redis
 name: Redis
 description: In-memory key-value database.
 
+features:
+  databases:
+    - type: redis
+      port: PORT
+
 environment:
   - type: port
     name: PORT
