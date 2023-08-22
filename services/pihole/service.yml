@@ -21,6 +21,17 @@ environment:
     default: 80
     description: The HTTP port.
 
+  - type: string
+    name: PASSWORD
+    display_name: Admin panel password
+    secret: true
+    description: The admin panel password.
+
+  - type: timezone
+    name: TZ
+    display_name: Timezone
+    description: The timezone
+
 urls:
   - name: Pi-hole Admin
     port: 53
@@ -38,5 +49,8 @@ methods:
     volumes:
       etc-pihole: /etc/pihole
       etc-dnsmasq.d: /etc/dnsmasq.d
+    environment:
+      TZ: TZ
+      WEBPASSWORD: PASSWORD
     capabilities:
       - NET_ADMIN
