@@ -1,0 +1,24 @@
+id: homer
+name: Homer
+description: A very simple static homepage.
+
+environment:
+  - type: port
+    name: PORT
+    display_name: Port
+    default: 8080
+    description: The port to expose homer.
+
+urls:
+  - name: Homer
+    port: 8080
+    ping: /
+    kind: client
+
+methods:
+  docker:
+    image: b4bz/homer
+    ports:
+      8080: 8080
+    volumes:
+      assets: /www/assets
