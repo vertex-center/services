@@ -1,0 +1,25 @@
+id: homepage
+name: Homepage
+description: A highly customizable homepage.
+
+environment:
+  - type: port
+    name: PORT
+    display_name: Port
+    default: 3000
+    description: The port to expose the homepage.
+
+urls:
+  - name: Homepage
+    port: 3000
+    ping: /
+    kind: client
+
+methods:
+  docker:
+    image: ghcr.io/benphelps/homepage
+    ports:
+      3000: 3000
+    volumes:
+      config: /app/config
+      /var/run/docker.dock: /var/run/docker.dock
