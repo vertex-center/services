@@ -1,0 +1,29 @@
+id: traefik
+name: Traefik
+description: The Cloud Native Application Proxy.
+
+environment:
+  - type: port
+    name: HTTP_PORT
+    display_name: HTTP Port
+    default: 80
+
+  - type: port
+    name: CLIENT_PORT
+    display_name: WebUI Port
+    default: 8080
+
+urls:
+  - name: Traefik Client
+    port: 8080
+    ping: /
+    kind: client
+
+methods:
+  docker:
+    image: traefik
+    ports:
+      - 80: 80
+      - 8080: 8080
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
