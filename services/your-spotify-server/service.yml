@@ -30,7 +30,7 @@ environment:
     description: Your Spotify Secret.
 
   - type: timezone
-    name: TZ
+    name: TIMEZONE
     display_name: Timezone
     description: The timezone
 
