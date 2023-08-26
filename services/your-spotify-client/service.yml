@@ -1,0 +1,28 @@
+id: your-spotify-client
+name: YourSpotify Client
+description: Self hosted Spotify tracking dashboard (client).
+
+environment:
+  - type: port
+    name: PORT
+    display_name: Web UI Port
+    default: 3000
+
+  - type: string
+    name: API_ENDPOINT
+    display_name: API Endpoint
+    default: http://localhost:8080
+
+urls:
+  - name: YourSpotify Client
+    port: 3000
+    ping: /
+    kind: client
+
+methods:
+  docker:
+    image: yooooomi/your_spotify_client
+    ports:
+      3000: 3000
+    environment:
+      API_ENDPOINT: API_ENDPOINT

@@ -1,0 +1,53 @@
+id: your-spotify-server
+name: YourSpotify Server
+description: Self hosted Spotify tracking dashboard (server).
+
+environment:
+  - type: port
+    name: PORT
+    display_name: Server Port
+    default: 8080
+
+  - type: string
+    name: API_ENDPOINT
+    display_name: API Endpoint
+    default: http://localhost:8080
+
+  - type: string
+    name: CLIENT_ENDPOINT
+    display_name: Client Endpoint
+    default: http://localhost:3000
+
+  - type: string
+    name: SPOTIFY_PUBLIC
+    display_name: Spotify ID
+    description: Your Spotify ID.
+
+  - type: string
+    name: SPOTIFY_SECRET
+    display_name: Spotify Secret
+    secret: true
+    description: Your Spotify Secret.
+
+  - type: timezone
+    name: TZ
+    display_name: Timezone
+    description: The timezone
+
+urls:
+  - name: YourSpotify Server
+    port: 8080
+    ping: /
+    kind: server
+
+methods:
+  docker:
+    image: yooooomi/your_spotify_server
+    ports:
+      8080: 8080
+    environment:
+      API_ENDPOINT: API_ENDPOINT
+      CLIENT_ENDPOINT: CLIENT_ENDPOINT
+      SPOTIFY_PUBLIC: SPOTIFY_PUBLIC
+      SPOTIFY_SECRET: SPOTIFY_SECRET
+      TIMEZONE: TIMEZONE

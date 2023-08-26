@@ -1,0 +1,11 @@
+id: mongo
+name: MongoDB
+description: The MongoDB Database.
+
+methods:
+  docker:
+    image: mongo
+    volumes:
+      db: /data/db
+    ports:
+      27017: 27017
