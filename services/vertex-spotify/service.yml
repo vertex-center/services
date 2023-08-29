@@ -27,6 +27,17 @@ environment:
     description: Your Spotify authentication callback.
 
   - type: string
+    name: DB_HOST
+    display_name: Database host
+    default: localhost
+    description: Your Postgres host.
+
+  - type: port
+    name: DB_PORT
+    display_name: Database port
+    description: Your Postgres port.
+
+  - type: string
     name: DB_USER
     display_name: Database user
     description: Your Postgres username.
@@ -47,3 +58,17 @@ methods:
     file: start.sh
     clone:
       repository: https://github.com/vertex-center/vertex-spotify
+  docker:
+    clone:
+      repository: https://github.com/vertex-center/vertex-spotify
+    ports:
+      6150: 6150
+    environment:
+      PORT: PORT
+      SPOTIFY_ID: SPOTIFY_ID
+      SPOTIFY_SECRET: SPOTIFY_SECRET
+      DB_HOST: DB_HOST
+      DB_PORT: DB_PORT
+      DB_USER: DB_USER
+      DB_PASSWORD: DB_PASSWORD
+      DB_NAME: DB_NAME
