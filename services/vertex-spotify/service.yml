@@ -59,6 +59,7 @@ methods:
     clone:
       repository: https://github.com/vertex-center/vertex-spotify
   docker:
+    dockerfile: Dockerfile
     clone:
       repository: https://github.com/vertex-center/vertex-spotify
     ports:
