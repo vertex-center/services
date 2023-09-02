@@ -76,16 +76,16 @@ methods:
       config: /config
       modules: /lib/modules
     environment:
-      - PUID: PUID
-      - PGID: PGID
-      - TZ: TZ
-      - SERVERURL: SERVERURL
-      - SERVERPORT: SERVERPORT
-      - PEERS: PEERS
-      - PEERDNS: PEERDNS
-      - INTERNAL_SUBNET: INTERNAL_SUBNET
-      - ALLOWEDIPS: ALLOWEDIPS
-      - PERSISTENTKEEPALIVE_PEERS: PERSISTENTKEEPALIVE_PEERS
-      - LOGS_CONFS: LOGS_CONFS
+      PUID: PUID
+      PGID: PGID
+      TZ: TZ
+      SERVERURL: SERVERURL
+      SERVERPORT: SERVERPORT
+      PEERS: PEERS
+      PEERDNS: PEERDNS
+      INTERNAL_SUBNET: INTERNAL_SUBNET
+      ALLOWEDIPS: ALLOWEDIPS
+      PERSISTENTKEEPALIVE_PEERS: PERSISTENTKEEPALIVE_PEERS
+      LOGS_CONFS: LOGS_CONFS
     sysctls:
-      - 'net.ipv4.conf.all.src_valid_mark': '1'
+      net.ipv4.conf.all.src_valid_mark: 1
