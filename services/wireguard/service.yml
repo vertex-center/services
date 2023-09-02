@@ -26,6 +26,12 @@ environment:
     description: Server URL.
 
   - type: port
+    name: HTTP_PORT
+    display_name: HTTP Port
+    description: HTTP Port.
+    default: 80
+
+  - type: port
     name: SERVERPORT
     display_name: Server Port
     description: Server Port.
