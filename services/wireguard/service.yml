@@ -26,12 +26,6 @@ environment:
     description: Server URL.
 
   - type: port
-    name: HTTP_PORT
-    display_name: HTTP Port
-    description: HTTP Port.
-    default: 80
-
-  - type: port
     name: SERVERPORT
     display_name: Server Port
     description: Server Port.
@@ -77,7 +71,6 @@ methods:
       - NET_ADMIN
       - SYS_MODULE
     ports:
-      80: 80
       '51820/udp': 51820
     volumes:
       config: /config
