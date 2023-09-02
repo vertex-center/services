@@ -1,0 +1,91 @@
+id: wireguard
+name: WireGuard
+description: Fast, Modern, Secure VPN tunnel.
+
+environment:
+  - type: string
+    name: PUID
+    display_name: PUID
+    default: 1000
+    description: User ID.
+
+  - type: string
+    name: PGID
+    display_name: PGID
+    default: 1000
+    description: Group ID.
+
+  - type: timezone
+    name: TZ
+    display_name: Timezone
+    description: The timezone
+
+  - type: string
+    name: SERVERURL
+    display_name: Server URL
+    description: Server URL.
+
+  - type: port
+    name: SERVERPORT
+    display_name: Server Port
+    description: Server Port.
+    default: 51820
+
+  - type: string
+    name: PEERS
+    display_name: Peers count
+    description: Number of codes to generate.
+    default: 1
+
+  - type: string
+    name: PEERDNS
+    display_name: Peer DNS
+    description: Peer DNS.
+    default: auto
+
+  - type: string
+    name: INTERNAL_SUBNET
+    display_name: Internal subnet
+    description: The internal sub-network.
+    default: 10.13.13.0
+  
+  - type: string
+    name: ALLOWEDIPS
+    display_name: Allowed IPs
+    description: Mask of the allowed IPs.
+    default: 0.0.0.0/0
+
+  - type: string
+    name: PERSISTENTKEEPALIVE_PEERS
+    display_name: Persistent keep-alive peers
+  
+  - type: string
+    name: LOGS_CONFS
+    display_name: Show QR codes in the logs.
+    default: true
+
+methods:
+  docker:
+    image: lscr.io/linuxserver/wireguard
+    capabilities:
+      - NET_ADMIN
+      - SYS_MODULE
+    ports:
+      '51820/udp': 51820
+    volumes:
+      config: /config
+      modules: /lib/modules
+    environment:
+      - PUID: PUID
+      - PGID: PGID
+      - TZ: TZ
+      - SERVERURL: SERVERURL
+      - SERVERPORT: SERVERPORT
+      - PEERS: PEERS
+      - PEERDNS: PEERDNS
+      - INTERNAL_SUBNET: INTERNAL_SUBNET
+      - ALLOWEDIPS: ALLOWEDIPS
+      - PERSISTENTKEEPALIVE_PEERS: PERSISTENTKEEPALIVE_PEERS
+      - LOGS_CONFS: LOGS_CONFS
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark: 1
