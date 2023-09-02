@@ -71,6 +71,7 @@ methods:
       - NET_ADMIN
       - SYS_MODULE
     ports:
+      80: 80
       '51820/udp': 51820
     volumes:
       config: /config
