@@ -88,4 +88,4 @@ methods:
       - PERSISTENTKEEPALIVE_PEERS: PERSISTENTKEEPALIVE_PEERS
       - LOGS_CONFS: LOGS_CONFS
     sysctls:
-      - net.ipv4.conf.all.src_valid_mark: 1
+      - 'net.ipv4.conf.all.src_valid_mark': '1'
