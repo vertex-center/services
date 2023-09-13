@@ -34,7 +34,8 @@ environment:
 
 urls:
   - name: Pi-hole Admin
-    port: 53
+    port: 80
+    home: /admin
     ping: /admin
     kind: client
 

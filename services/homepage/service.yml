@@ -12,7 +12,6 @@ environment:
 urls:
   - name: Homepage
     port: 3000
-    ping: /
     kind: client
 
 methods:

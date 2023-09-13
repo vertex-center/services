@@ -18,8 +18,11 @@ environment:
 urls:
   - name: OneDev
     port: 6610
-    ping: /
     kind: client
+
+  - name: OneDev Server
+    port: 6610
+    kind: server
 
 methods:
   docker:

@@ -12,7 +12,6 @@ environment:
 urls:
   - name: Homer
     port: 8080
-    ping: /
     kind: client
 
 methods:

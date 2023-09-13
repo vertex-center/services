@@ -16,7 +16,6 @@ environment:
 urls:
   - name: Traefik Client
     port: 8080
-    ping: /
     kind: client
 
 methods:

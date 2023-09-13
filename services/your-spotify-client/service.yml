@@ -16,7 +16,6 @@ environment:
 urls:
   - name: YourSpotify Client
     port: 3000
-    ping: /
     kind: client
 
 methods:
