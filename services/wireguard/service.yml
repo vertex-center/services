@@ -1,6 +1,8 @@
 id: wireguard
 name: WireGuard
 description: Fast, Modern, Secure VPN tunnel.
+color: '#88171A'
+icon: wireguard.svg
 
 environment:
   - type: string

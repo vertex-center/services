@@ -1,6 +1,8 @@
 id: pihole
 name: Pi-hole
 description: Network-wide Ad Blocking
+color: '#96060C'
+icon: pihole.svg
 
 environment:
   - type: port

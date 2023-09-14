@@ -1,6 +1,8 @@
 id: traefik
 name: Traefik
 description: The Cloud Native Application Proxy.
+color: '#24A1C1'
+icon: traefik.svg
 
 environment:
   - type: port
