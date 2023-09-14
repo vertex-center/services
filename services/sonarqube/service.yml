@@ -1,0 +1,27 @@
+id: sonarqube
+name: SonarQube
+description: Clean Code Analysis.
+color: '#4E9BCD'
+icon: simpleicons/sonarqube.svg
+
+environment:
+  - type: port
+    name: PORT
+    display_name: Port
+    default: 9000
+    description: The port to expose.
+
+urls:
+  - name: SonarQube
+    port: 9000
+    kind: client
+
+methods:
+  docker:
+    image: sonarqube
+    ports:
+      9000: 9000
+    volumes:
+      data: /opt/sonarqube/data
+      logs: /opt/sonarqube/logs
+      extensions: /opt/sonarqube/extensions
