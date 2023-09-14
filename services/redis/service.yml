@@ -2,7 +2,7 @@ id: redis
 name: Redis
 description: In-memory key-value database.
 color: '#DC382D'
-icon: redis.svg
+icon: simpleicons/redis.svg
 
 features:
   databases:

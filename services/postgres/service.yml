@@ -2,7 +2,7 @@ id: postgres
 name: Postgres
 description: A relational database.
 color: '#4169E1'
-icon: postgres.svg
+icon: simpleicons/postgres.svg
 
 features:
   databases:

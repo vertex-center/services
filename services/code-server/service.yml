@@ -2,7 +2,7 @@ id: code-server
 name: Code Server
 description: VSCode in the browser
 color: '#007ACC'
-icon: code-server.svg
+icon: simpleicons/code-server.svg
 
 environment:
   - type: port

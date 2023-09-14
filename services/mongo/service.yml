@@ -2,7 +2,7 @@ id: mongo
 name: MongoDB
 description: The MongoDB Database.
 color: '#47A248'
-icon: mongo.svg
+icon: simpleicons/mongo.svg
 
 methods:
   docker:
