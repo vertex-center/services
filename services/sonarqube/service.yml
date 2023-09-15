@@ -11,6 +11,22 @@ environment:
     default: 9000
     description: The port to expose.
 
+  - type: string
+    name: SONAR_JDBC_URL
+    display_name: Database URL
+    description: The database URL.
+
+  - type: string
+    name: SONAR_JDBC_USERNAME
+    display_name: Database user
+    description: Your database username.
+  
+  - type: string
+    name: SONAR_JDBC_PASSWORD
+    display_name: Database password
+    secret: true
+    description: Your database password.
+
 urls:
   - name: SonarQube
     port: 9000
@@ -21,6 +37,10 @@ methods:
     image: sonarqube
     ports:
       9000: 9000
+    environment:
+      SONAR_JDBC_URL: SONAR_JDBC_URL
+      SONAR_JDBC_USERNAME: SONAR_JDBC_USERNAME
+      SONAR_JDBC_PASSWORD: SONAR_JDBC_PASSWORD
     volumes:
       data: /opt/sonarqube/data
       logs: /opt/sonarqube/logs
