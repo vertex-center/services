@@ -58,10 +58,9 @@ methods:
     file: start.sh
     clone:
       repository: https://github.com/vertex-center/vertex-spotify
+
   docker:
-    dockerfile: Dockerfile
-    clone:
-      repository: https://github.com/vertex-center/vertex-spotify
+    image: ghcr.io/vertex-center/vertex-spotify
     ports:
       6150: 6150
     environment:
