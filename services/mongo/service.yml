@@ -1,3 +1,5 @@
+version: 1
+
 id: mongo
 name: MongoDB
 description: The MongoDB Database.

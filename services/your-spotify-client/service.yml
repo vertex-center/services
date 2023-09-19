@@ -1,3 +1,5 @@
+version: 1
+
 id: your-spotify-client
 name: YourSpotify Client
 description: Self hosted Spotify tracking dashboard (client).

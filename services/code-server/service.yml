@@ -1,3 +1,5 @@
+version: 1
+
 id: code-server
 name: Code Server
 description: VSCode in the browser

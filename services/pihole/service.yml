@@ -1,3 +1,5 @@
+version: 1
+
 id: pihole
 name: Pi-hole
 description: Network-wide Ad Blocking

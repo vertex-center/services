@@ -1,3 +1,5 @@
+version: 1
+
 id: homepage
 name: Homepage
 description: A highly customizable homepage.

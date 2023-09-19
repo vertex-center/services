@@ -1,3 +1,5 @@
+version: 1
+
 id: traefik
 name: Traefik
 description: The Cloud Native Application Proxy.

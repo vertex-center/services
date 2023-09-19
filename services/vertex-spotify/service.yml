@@ -1,3 +1,5 @@
+version: 1
+
 id: vertex-spotify
 name: Vertex Spotify
 repository: https://github.com/vertex-center/vertex-spotify
@@ -27,31 +29,22 @@ environment:
     description: Your Spotify authentication callback.
 
   - type: string
-    name: DB_HOST
-    display_name: Database host
-    default: localhost
-    description: Your Postgres host.
-
-  - type: port
-    name: DB_PORT
-    display_name: Database port
-    description: Your Postgres port.
-
-  - type: string
-    name: DB_USER
-    display_name: Database user
-    description: Your Postgres username.
-
-  - type: string
-    name: DB_PASSWORD
-    display_name: Database password
-    description: Your Postgres password.
-
-  - type: string
     name: DB_NAME
     display_name: Database name
     default: vertex-spotify
     description: Name of the database where this service will store data.
+
+databases:
+  main:
+    display_name: Database
+    types:
+      - postgres
+    names:
+      host: DB_HOST
+      port: DB_PORT
+      username: DB_USER
+      password: DB_PASSWORD
+      database: DB_NAME
 
 methods:
   script:

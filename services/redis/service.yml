@@ -1,3 +1,5 @@
+version: 1
+
 id: redis
 name: Redis
 description: In-memory key-value database.

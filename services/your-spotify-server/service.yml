@@ -1,3 +1,5 @@
+version: 1
+
 id: your-spotify-server
 name: YourSpotify Server
 description: Self hosted Spotify tracking dashboard (server).
