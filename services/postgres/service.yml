@@ -41,8 +41,3 @@ methods:
     environment:
       POSTGRES_USER: POSTGRES_USER
       POSTGRES_PASSWORD: POSTGRES_PASSWORD
-
-  script:
-    file: start.sh
-    dependencies:
-      postgres:

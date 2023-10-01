@@ -60,8 +60,3 @@ methods:
       DB_USER: DB_USER
       DB_PASSWORD: DB_PASSWORD
       DB_NAME: DB_NAME
-
-  script:
-    file: start.sh
-    clone:
-      repository: https://github.com/vertex-center/vertex-spotify
