@@ -1,0 +1,22 @@
+version: 1
+
+id: uptime-kuma
+name: Uptime Kuma
+description: Uptime Monitoring Application
+color: '#5CDD8B' 
+icon: simpleicons/uptimekuma.svg
+
+environment:
+  - type: port
+    name: PORT
+    display_name: Port
+    default: 3001
+    description: The port to access uptime-kuma
+
+methods:
+  docker:
+    image: louislam/uptime-kuma
+    volumes:
+      data: /app/data
+    ports:
+      '3001/tcp': 3001
