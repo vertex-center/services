@@ -16,12 +16,7 @@ environment:
 methods:
   docker:
     image: louislam/uptime-kuma
-    container_name: uptime-kuma
     volumes:
-      uptime-kuma: /app/data
+      data: /app/data
     ports:
       '3001/tcp': 3001
-    restart: always
-
-volumes:
-  uptime-kuma:
