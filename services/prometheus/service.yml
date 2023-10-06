@@ -1,0 +1,27 @@
+version: 1
+
+id: prometheus
+name: Prometheus
+description: A monitoring system.
+color: '#E6522C'
+icon: simpleicons/prometheus.svg
+
+environment:
+  - type: port
+    name: PORT
+    display_name: Server Port
+    default: 9090
+    description: The port to expose the Prometheus server.
+
+urls:
+  - name: Prometheus
+    port: 9090
+    kind: server
+
+methods:
+  docker:
+    image: prom/prometheus
+    ports:
+      9090: 9090
+    volumes:
+      config: /etc/prometheus

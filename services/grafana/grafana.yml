@@ -1,0 +1,25 @@
+version: 1
+
+id: grafana
+name: Grafana
+description: A dashboard for visualizing metrics.
+color: '#F46800'
+icon: simpleicons/grafana.svg
+
+environment:
+  - type: port
+    name: PORT
+    display_name: Server Port
+    default: 3000
+    description: The port to expose Grafana.
+
+urls:
+  - name: Grafana
+    port: 3000
+    kind: client
+
+methods:
+  docker:
+    image: grafana/grafana-oss
+    ports:
+      3000: 3000
