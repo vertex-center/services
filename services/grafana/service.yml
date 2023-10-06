@@ -23,3 +23,10 @@ methods:
     image: grafana/grafana-oss
     ports:
       3000: 3000
+    volumes:
+      config: /etc/grafana/grafana.ini
+      data: /var/lib/grafana
+      home: /usr/share/grafana
+      logs: /var/log/grafana
+      plugins: /var/lib/grafana/plugins
+      provisioning: /etc/grafana/provisioning
