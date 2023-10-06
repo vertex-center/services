@@ -19,4 +19,5 @@ Install these services directly from your main [Vertex](https://github.com/verte
 ## License
 
 * [Vertex Services](https://github.com/vertex-center/vertex-services) is released under the [MIT License](./LICENSE.md).
-* All icons in `icons/simpleicons/*` are from [Simple Icons](https://simpleicons.org/).
+* All icons in `icons/simpleicons/*` are from [Simple Icons](https://simpleicons.org/), under the CC0 license.
+* All icons in `icons/onedev/*` are from [OneDev](https://code.onedev.io/onedev/server/), under the MIT license.

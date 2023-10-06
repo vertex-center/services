@@ -3,6 +3,8 @@ version: 1
 id: onedev
 name: OneDev
 description: Self-hosted Git Server with CI/CD and Kanban.
+color: '#000000'
+icon: onedev/onedev.png
 
 environment:
   - type: port
