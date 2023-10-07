@@ -1,0 +1,21 @@
+version: 1
+
+id: cloudflared
+name: Cloudflare Tunnel
+description: Securely expose your local web server to the Internet.
+color: "#F38020"
+icon: simpleicons/cloudflare.svg
+
+environment:
+  - type: string
+    name: TUNNEL_TOKEN
+    display_name: Tunnel Token
+    secret: true
+    description: The tunnel token.
+
+methods:
+  docker:
+    image: cloudflare/cloudflared
+    command: tunnel run
+    environment:
+      TUNNEL_TOKEN: TUNNEL_TOKEN
