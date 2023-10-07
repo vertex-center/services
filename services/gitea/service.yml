@@ -4,7 +4,7 @@ id: gitea
 name: Gitea
 description: An alternative to GitHub.
 color: '#609926'
-icon: simpleicons/gitea.png
+icon: simpleicons/gitea.svg
 
 environment:
   - type: port
