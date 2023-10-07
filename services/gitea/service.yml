@@ -28,7 +28,7 @@ methods:
   docker:
     image: gitea/gitea
     volumes:
-      - data: /data
+      data: /data
     ports:
       3000: 3000
       22: 22
