@@ -1,0 +1,34 @@
+version: 1
+
+id: gitea
+name: Gitea
+description: An alternative to GitHub.
+color: '#609926'
+icon: simpleicons/gitea.png
+
+environment:
+  - type: port
+    name: PORT
+    display_name: Server Port
+    default: 3000
+    description: The port to expose Gitea.
+
+  - type: port
+    name: SSH_PORT
+    display_name: SSH Port
+    default: 22
+    description: The port to expose Gitea's SSH server.
+
+urls:
+  - name: Gitea
+    port: 3000
+    kind: client
+
+methods:
+  docker:
+    image: gitea/gitea
+    volumes:
+      - data: /data
+    ports:
+      3000: 3000
+      22: 22
