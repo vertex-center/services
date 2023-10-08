@@ -9,6 +9,7 @@ icon: simpleicons/postgres.svg
 features:
   databases:
     - type: postgres
+      category: sql
       port: PORT
       username: POSTGRES_USER
       password: POSTGRES_PASSWORD
