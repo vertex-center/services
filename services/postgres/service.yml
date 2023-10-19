@@ -32,6 +32,11 @@ environment:
     secret: true
     description: The database superuser password.
 
+  - type: string
+    name: POSTGRES_DB
+    display_name: Database Name
+    description: The name of default database.
+
 methods:
   docker:
     image: postgres
@@ -42,3 +47,4 @@ methods:
     environment:
       POSTGRES_USER: POSTGRES_USER
       POSTGRES_PASSWORD: POSTGRES_PASSWORD
+      POSTGRES_DB: POSTGRES_DB
