@@ -6,6 +6,17 @@ description: The MongoDB Database.
 color: '#47A248'
 icon: simpleicons/mongo.svg
 
+environment:
+  type: port
+  name: PORT
+  display_name: Port
+  default: 27017
+
+urls:
+  - name: MongoDB Database
+    port: 27017
+    kind: server
+
 methods:
   docker:
     image: mongo
