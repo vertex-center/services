@@ -30,6 +30,11 @@ environment:
     display_name: Spotify Secret
     secret: true
     description: Your Spotify Secret.
+  
+  - type: string
+    name: MONGO_ENDPOINT
+    display_name: Mongo Endpoint
+    default: mongodb://mongo:27017/your_spotify
 
   - type: timezone
     name: TIMEZONE
@@ -51,4 +56,5 @@ methods:
       CLIENT_ENDPOINT: CLIENT_ENDPOINT
       SPOTIFY_PUBLIC: SPOTIFY_PUBLIC
       SPOTIFY_SECRET: SPOTIFY_SECRET
+      MONGO_ENDPOINT: MONGO_ENDPOINT
       TIMEZONE: TIMEZONE
