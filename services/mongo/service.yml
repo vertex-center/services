@@ -7,10 +7,10 @@ color: '#47A248'
 icon: simpleicons/mongo.svg
 
 environment:
-  type: port
-  name: PORT
-  display_name: Port
-  default: 27017
+  - type: port
+    name: PORT
+    display_name: Port
+    default: 27017
 
 urls:
   - name: MongoDB Database
